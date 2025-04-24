@@ -68,6 +68,10 @@ body {
         font-weight: var(--fw-mild);
         color: var(--Purple-950);
 
+        :hover {
+            color: var(--Purple-600);
+        }
+
         img {
             justify-self: end;
         }
