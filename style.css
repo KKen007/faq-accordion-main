@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --White: hsl(0, 100%, 100%);
+    --Purple-100: hsl(275, 100%, 97%);
+    --Purple-600: hsl(292, 16%, 49%);
+    --Purple-950: hsl(292, 42%, 14%);
+
+    --fs: 1rem;
+
+    --ff: "Work Sans";
+
+    --fw-regular: 400;
+    --fw-mild: 600;
+    --fw-bold: 700;
+}
+
+@font-face {
+    font-family: "Work Sans";
+    src: url("assets/fonts/WorkSans-VariableFont_wght.ttf");
+}
+
+body {
+    font-family: var(--ff);
+    background: url("assets/images/background-pattern-mobile.svg") no-repeat top center, var(--Purple-100);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block-start: 8rem;
+    padding-block-end: 2rem;
+}
+
+.faq {
+    background-color: var(--White);
+    width: 87%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    display: grid;
+}
+
+.title {
+    color: var(--Purple-950);
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.25rem;
+
+    img {
+        width: 1.5rem;
+    }
+}
+
+.faq__quiz {
+    border-bottom: solid 2px var(--Purple-100);
+    padding-block: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+    font-size: var(--fs);
+
+    .question {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        font-weight: var(--fw-mild);
+        color: var(--Purple-950);
+
+        img {
+            justify-self: end;
+        }
+    }
+
+    .answer-2, .answer-3, .answer-4 {
+        display: none;
+    }
+
+    .answer-after-click, .answer-1 {
+        color: var(--Purple-600);
+        font-size: 0.825rem;
+        line-height: 1.5;
+    }
+}
+
+.quiz_4 {
+    border: none;
+    padding-bottom: 0;
+}
+
+@media screen and (min-width:376px) {
+    body {
+        background: url("assets/images/background-pattern-desktop.svg") no-repeat top center, var(--Purple-100);
+    }
+}
+
+@media screen and (min-width:735px) {
+    .faq {
+        width: 700px;
+    }
+}
+
+@media screen and (min-width:1441px) {
+    body {
+        background-size: 100% auto;
+    }
+}
